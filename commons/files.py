@@ -1,11 +1,7 @@
 import fnmatch
 import os
-from os.path import isdir, join
-import fnmatch
 import shutil
-from typing import List
-
-import cv2
+from os.path import isdir, join
 
 
 def create_dirs_if_not_exists(*dirs):
