@@ -10,8 +10,8 @@ def play_video(path, on_frame_func=None, start_from_frame=0, fps=10):
     cap = cv2.VideoCapture(path)
 
     # Check if camera opened successfully
-    if (cap.isOpened() == False):
-        print("Error opening video stream or file")
+    if cap.isOpened() == False:
+        print(f"Error opening video stream or file with path '{path}'")
 
     frame_nr = 0
     # Read until video is completed
@@ -42,9 +42,3 @@ def play_video(path, on_frame_func=None, start_from_frame=0, fps=10):
 
     # Closes all the frames
     cv2.destroyAllWindows()
-
-
-if __name__ == '__main__':
-    path = '/media/data/kinect-recordings/2017-11-06/2017-11-06_15h20m11s_(737208ms)/color-recording-middle-x265.mp4'
-    path = '/home/adverley/Code/external-projects/AlphaPose/examples/res/2017-11-06_15h20m11s_(737208ms)-left/AlphaPose_color-recording-left-x265.avi'
-    play_video(path, start_from_frame=400)
