@@ -4,7 +4,7 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 setup(
-    name='MyCommons',
+    name='my-commons',
     version='0.1.0',
     author='Andreas Verleysen',
     author_email='andreas.verleysen@gmail.com',
