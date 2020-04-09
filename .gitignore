@@ -52,6 +52,12 @@ out/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
+# ignore egg info from pip install . -e
+*.egg-info
+
+# ignore all the caches
+*__pycache__*
+
 # JIRA plugin
 atlassian-ide-plugin.xml
 
