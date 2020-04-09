@@ -3,6 +3,8 @@ import os
 import shutil
 from os.path import isdir, join
 
+def is_file(file_path):
+    return os.path.isfile(file_path)
 
 def create_dirs_if_not_exists(*dirs):
     for d in dirs:
