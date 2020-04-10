@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 
 
-def frames_to_video(sorted_frames_filepath: List[str], output_video_filepath, fps=10):
+def frames_to_video(sorted_frames_filepath: List[str], output_video_filepath, resize=None, fps=10):
     first_image = cv2.imread(sorted_frames_filepath[0])
     video_writer = get_video_writer(output_video_filepath, resolution=first_image.shape, fps=10)
 
@@ -17,6 +17,9 @@ def frames_to_video(sorted_frames_filepath: List[str], output_video_filepath, fp
 
     for f, frame_filepath in enumerate(sorted_frames_filepath):
         frame = frames[f] if precache else cv2.imread(frame_filepath)
+        if resize is not None:
+            frame = cv2.resize(frame, resize)
+
         video_writer.write(frame)
 
     video_writer.release()
