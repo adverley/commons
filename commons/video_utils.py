@@ -7,7 +7,8 @@ import numpy as np
 
 def frames_to_video(sorted_frames_filepath: List[str], output_video_filepath, resize=None, fps=10):
     first_image = cv2.imread(sorted_frames_filepath[0])
-    video_writer = get_video_writer(output_video_filepath, resolution=first_image.shape, fps=10)
+    resolution = resize if resize is not None else (first_image.shape[0], first_image.shape[1])
+    video_writer = get_video_writer(output_video_filepath, resolution=resolution, fps=10)
 
     max_buffer_length = 5_000
     precache = len(sorted_frames_filepath) < max_buffer_length
