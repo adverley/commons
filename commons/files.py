@@ -17,7 +17,7 @@ def make_dir_if_not_exist(dir):
     if not os.path.exists(dir):
         os.makedirs(dir)
 
-        return dir
+    return dir
 
 
 def all_directories_in(path):
