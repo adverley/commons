@@ -17,6 +17,8 @@ add `git+ssh://git@github.com/adverley/commons.git
 ` to requirements.txt file
 
 ### Using local project
-`git clone https://github.com/adverley/commons`
+```
+git clone https://github.com/adverley/commons
 cd commons
 pip install -e .
+```
