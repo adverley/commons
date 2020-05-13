@@ -13,8 +13,11 @@ python 3.6 or higher.
 ## Installation instructions
 
 ### Using requirements.txt file
-add `git+ssh://git@github.com/adverley/commons.git
-` to requirements.txt file
+add
+ 
+`git+ssh://git@github.com/adverley/commons.git` 
+
+to requirements.txt file
 
 ### Using local project
 ```
