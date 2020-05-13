@@ -106,6 +106,6 @@ def glue_videos(*video_file_paths):
     # does it in memory, need enough RAM
     frames = []
     for video_fp in video_file_paths:
-        frames.append(load_frames_to_memory(video_fp))
+        frames.append(*load_frames_to_memory(video_fp))
 
     return frames
