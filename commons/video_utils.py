@@ -107,6 +107,6 @@ def glue_videos(*video_file_paths):
     frames = []
     for video_fp in video_file_paths:
         # extend function takes places on object
-        frames.extend(*load_frames_to_memory(video_fp))
+        frames.extend(load_frames_to_memory(video_fp))
 
     return frames
